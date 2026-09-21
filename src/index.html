@@ -1,13 +1,430 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MP1</title>
-    </head>
-    <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Northstar - an Arctic exploration and adventure website"
+    />
+    <title>Northstar | Explore Beyond</title>
+  </head>
+
+  <body>
+    <!-- =========================
+         HEADER / STICKY NAVBAR
+    ========================== -->
+    <header class="site-header">
+      <nav class="navbar" aria-label="Main navigation">
+        <a class="logo" href="#home">NORTHSTAR</a>
+
+        <ul class="nav-links">
+          <li><a class="nav-link active" href="#home">Home</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#destinations">Destinations</a></li>
+          <li><a class="nav-link" href="#experiences">Experiences</a></li>
+          <li><a class="nav-link" href="#story">Story</a></li>
+          <li><a class="nav-link" href="#video">Video</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- =========================
+           HERO
+      ========================== -->
+      <section id="home" class="section hero">
+        <div class="section-content hero-content">
+          <p class="eyebrow">EXPLORE • DISCOVER • EXPERIENCE</p>
+
+          <h1>Go Beyond the Ordinary</h1>
+
+          <p class="hero-description">
+            Journey north into wild landscapes, endless horizons, and
+            unforgettable experiences beneath the Arctic sky.
+          </p>
+
+          <a class="primary-button" href="#about">Start Exploring</a>
+        </div>
+      </section>
+
+      <!-- =========================
+           ABOUT / MULTI-COLUMN
+      ========================== -->
+      <section id="about" class="section about">
+        <div class="section-content">
+          <span class="compass-icon" aria-hidden="true"></span>
+
+          <p class="section-label">WHY NORTHSTAR</p>
+
+          <h2>Adventure begins with curiosity.</h2>
+
+          <p class="section-intro">
+            Northstar is about traveling farther, slowing down, and seeing the
+            world with a little more curiosity.
+          </p>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <span class="feature-number">01</span>
+              <h3>Discover</h3>
+              <p>
+                Find remarkable destinations, remote landscapes, and hidden
+                places worth exploring.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <span class="feature-number">02</span>
+              <h3>Experience</h3>
+              <p>
+                Leave the ordinary behind and turn every journey into an
+                experience that stays with you.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <span class="feature-number">03</span>
+              <h3>Remember</h3>
+              <p>
+                Capture the people, moments, and stories that make each journey
+                meaningful.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+           CAROUSEL
+      ========================== -->
+      <section id="destinations" class="section destinations">
+        <div class="section-content">
+          <p class="section-label">FEATURED DESTINATIONS</p>
+
+          <h2>Places worth the journey.</h2>
+
+          <p class="section-intro">
+            Three northern destinations, each with a different way to
+            experience the edge of the world.
+          </p>
+
+          <div class="carousel" aria-label="Featured destinations">
+            <button
+              class="carousel-button carousel-button-prev"
+              type="button"
+              aria-label="Previous destination"
+            >
+              &#10094;
+            </button>
+
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+                <article class="carousel-slide slide-alaska">
+                  <div class="slide-content">
+                    <p class="slide-number">01</p>
+                    <p class="slide-location">ALASKA • USA</p>
+
+                    <h3>Into the Wild</h3>
+
+                    <p>
+                      Endless mountains, quiet wilderness, icy coastlines, and
+                      landscapes that make the world feel impossibly large.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="carousel-slide slide-iceland">
+                  <div class="slide-content">
+                    <p class="slide-number">02</p>
+                    <p class="slide-location">ICELAND • NORTH ATLANTIC</p>
+
+                    <h3>Land of Fire & Ice</h3>
+
+                    <p>
+                      Black beaches, frozen waterfalls, geothermal landscapes,
+                      and long roads beneath enormous northern skies.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="carousel-slide slide-svalbard">
+                  <div class="slide-content">
+                    <p class="slide-number">03</p>
+                    <p class="slide-location">SVALBARD • NORWAY</p>
+
+                    <h3>Edge of the Arctic</h3>
+
+                    <p>
+                      Glaciers, polar wilderness, dramatic mountains, and a
+                      remote landscape shaped by ice and ocean.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <button
+              class="carousel-button carousel-button-next"
+              type="button"
+              aria-label="Next destination"
+            >
+              &#10095;
+            </button>
+
+            <div class="carousel-dots" aria-label="Carousel navigation">
+              <button
+                class="carousel-dot active"
+                type="button"
+                aria-label="Go to slide 1"
+                data-slide="0"
+              ></button>
+
+              <button
+                class="carousel-dot"
+                type="button"
+                aria-label="Go to slide 2"
+                data-slide="1"
+              ></button>
+
+              <button
+                class="carousel-dot"
+                type="button"
+                aria-label="Go to slide 3"
+                data-slide="2"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+           EXPERIENCES / MODAL
+      ========================== -->
+      <section id="experiences" class="section experiences">
+        <div class="section-content">
+          <p class="section-label">EXPERIENCES</p>
+
+          <h2>Travel is more than a destination.</h2>
+
+          <p class="section-intro">
+            The best journeys are remembered through the moments we experience
+            along the way.
+          </p>
+
+          <div class="experience-grid">
+            <article class="experience-card">
+              <span class="experience-number">01</span>
+
+              <h3>Chase the Northern Lights</h3>
+
+              <p>
+                Stand beneath a dark Arctic sky and watch the night come alive.
+              </p>
+
+              <button
+                class="modal-open-button"
+                type="button"
+                data-modal-title="Chase the Northern Lights"
+                data-modal-location="TROMSØ • NORWAY"
+                data-modal-text="Far above the Arctic Circle, winter nights create the perfect setting for one of nature's most unforgettable displays. Explore snowy landscapes and quiet fjords before waiting beneath the stars for the aurora to appear."
+              >
+                Explore Experience
+              </button>
+            </article>
+
+            <article class="experience-card">
+              <span class="experience-number">02</span>
+
+              <h3>Walk Across the Ice</h3>
+
+              <p>
+                Step onto a glacier and discover a landscape shaped over
+                centuries.
+              </p>
+
+              <button
+                class="modal-open-button"
+                type="button"
+                data-modal-title="Walk Across the Ice"
+                data-modal-location="VATNAJÖKULL • ICELAND"
+                data-modal-text="Travel across ancient ice surrounded by deep blue crevasses, volcanic mountains, and enormous frozen landscapes. A glacier trek transforms the Arctic environment into something you can experience one careful step at a time."
+              >
+                Explore Experience
+              </button>
+            </article>
+
+            <article class="experience-card">
+              <span class="experience-number">03</span>
+
+              <h3>Follow the Midnight Sun</h3>
+
+              <p>
+                Experience summer days when the Arctic sun never fully sets.
+              </p>
+
+              <button
+                class="modal-open-button"
+                type="button"
+                data-modal-title="Follow the Midnight Sun"
+                data-modal-location="SVALBARD • NORWAY"
+                data-modal-text="During Arctic summer, daylight stretches through the entire night. Hike beneath golden light, explore remote valleys, and experience the strange feeling of looking at your watch at midnight while the sun remains above the horizon."
+              >
+                Explore Experience
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+           FIXED BACKGROUND
+      ========================== -->
+      <section id="story" class="section story">
+        <div class="section-content story-content">
+          <p class="section-label">OUR STORY</p>
+
+          <h2>The world is waiting.</h2>
+
+          <p>
+            Every journey begins with a decision to leave something familiar
+            behind and discover what exists beyond it.
+          </p>
+
+          <a class="secondary-button" href="#video">Watch the Journey</a>
+        </div>
+      </section>
+
+      <!-- =========================
+           HTML5 VIDEO
+      ========================== -->
+      <section id="video" class="section video-section">
+        <div class="section-content">
+          <p class="section-label">EXPEDITION FILM</p>
+
+          <h2>See the journey.</h2>
+
+          <p class="section-intro">
+            A short film to capture the atmosphere of exploration and the
+            landscapes that inspire Northstar.
+          </p>
+
+          <div class="video-wrapper">
+            <video
+              class="journey-video"
+              controls
+              muted
+              playsinline
+              preload="metadata"
+              poster="assets/image.jpg"
+            >
+              <source
+                src="https://media.w3.org/2010/05/sintel/trailer.mp4"
+                type="video/mp4"
+              />
+
+              Your browser does not support the HTML5 video element.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+           CONTACT / SOCIAL ICONS
+      ========================== -->
+      <section id="contact" class="section contact">
+        <div class="section-content contact-content">
+          <p class="section-label">STAY CONNECTED</p>
+
+          <h2>Keep exploring.</h2>
+
+          <p class="contact-description">
+            Follow the journey, discover new places, and keep looking beyond
+            the familiar.
+          </p>
+
+          <div class="social-links">
+            <a
+              class="social-link"
+              href="https://github.com/Justin2777"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <span
+                class="social-icon social-icon-github"
+                aria-hidden="true"
+              ></span>
+              <span>GitHub</span>
+            </a>
+
+            <a
+              class="social-link"
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <span
+                class="social-icon social-icon-linkedin"
+                aria-hidden="true"
+              ></span>
+              <span>LinkedIn</span>
+            </a>
+
+            <a
+              class="social-link"
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <span
+                class="social-icon social-icon-instagram"
+                aria-hidden="true"
+              ></span>
+              <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================
+         MODAL WINDOW
+    ========================== -->
+    <div class="modal" id="experience-modal" aria-hidden="true">
+      <div class="modal-backdrop"></div>
+
+      <div
+        class="modal-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+        tabindex="-1"
+      >
+        <button
+          class="modal-close-button"
+          type="button"
+          aria-label="Close modal"
+        >
+          &times;
+        </button>
+
+        <p class="modal-label" id="modal-location"></p>
+
+        <h2 id="modal-title"></h2>
+
+        <p id="modal-text"></p>
+      </div>
+    </div>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="site-footer">
+      <p>&copy; 2026 Northstar. Explore beyond the ordinary.</p>
+    </footer>
+  </body>
 </html>

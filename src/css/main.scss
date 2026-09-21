@@ -1,1 +1,1160 @@
-/* Your SCSS here. */
+// ============================================
+// SCSS VARIABLES
+// ============================================
+
+$dark: #0d1b1e;
+$dark-soft: #173337;
+$light: #f7f7f2;
+$white: #ffffff;
+$accent: #efa452;
+$muted: #68777a;
+$section-alt: #e7eeec;
+
+$max-width: 1180px;
+$section-padding: 110px;
+
+
+// ============================================
+// SCSS MIXINS
+// ============================================
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin content-width {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+@mixin large-heading {
+  font-size: clamp(2.2rem, 4.2vw, 3.6rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+
+// ============================================
+// RESET / GLOBAL
+// ============================================
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  overflow-x: hidden;
+
+  background: $light;
+  color: $dark;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  line-height: 1.6;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+
+// ============================================
+// SHARED SECTION STYLES
+// ============================================
+
+.section {
+  width: 100%;
+  padding: $section-padding 24px;
+}
+
+.section-content {
+  @include content-width;
+
+  text-align: center;
+}
+
+.section-label,
+.eyebrow,
+.slide-location,
+.modal-label {
+  color: $accent;
+
+  font-size: 0.78rem;
+  font-weight: 800;
+
+  letter-spacing: 0.17em;
+}
+
+.section-label,
+.eyebrow {
+  margin-bottom: 18px;
+}
+
+.section h2 {
+  @include large-heading;
+
+  margin-bottom: 24px;
+}
+
+.section-intro {
+  max-width: 680px;
+  margin: 0 auto;
+
+  color: $muted;
+}
+
+
+// ============================================
+// STICKY NAVBAR
+// ============================================
+
+.site-header {
+  position: sticky;
+  top: 0;
+
+  z-index: 1000;
+
+  width: 100%;
+
+  background: rgba(13, 27, 30, 0.97);
+
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
+
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.navbar {
+  @include content-width;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 25px 24px;
+
+  transition: padding 0.3s ease;
+}
+
+.logo {
+  color: $white;
+
+  font-size: 1.4rem;
+  font-weight: 900;
+
+  letter-spacing: 0.13em;
+
+  transition:
+    color 0.25s ease,
+    font-size 0.3s ease;
+}
+
+.logo:hover {
+  color: $accent;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+
+  gap: 27px;
+}
+
+.nav-link {
+  position: relative;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 1rem;
+
+  transition:
+    color 0.25s ease,
+    font-size 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -8px;
+
+  width: 0;
+  height: 2px;
+
+  background: $accent;
+
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: $white;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+
+// Navbar becomes smaller after scrolling.
+
+.site-header.scrolled .navbar {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.site-header.scrolled .logo {
+  font-size: 1.1rem;
+}
+
+.site-header.scrolled .nav-link {
+  font-size: 0.88rem;
+}
+
+
+// ============================================
+// HERO / FIXED BACKGROUND / VERTICAL CENTERING
+// ============================================
+
+.hero {
+  position: relative;
+
+  min-height: calc(100vh - 80px);
+
+  @include flex-center;
+
+  color: $white;
+
+  background:
+    linear-gradient(
+      rgba(5, 18, 22, 0.62),
+      rgba(5, 18, 22, 0.73)
+    ),
+    url("../assets/image.jpg");
+
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.hero h1 {
+  margin-bottom: 28px;
+
+  font-size: clamp(3.4rem, 7vw, 6.4rem);
+  line-height: 0.96;
+
+  letter-spacing: -0.045em;
+
+  animation: fade-up 0.85s ease both;
+}
+
+.eyebrow {
+  animation: fade-up 0.85s ease 0.08s both;
+}
+
+.hero-description {
+  max-width: 690px;
+
+  margin: 0 auto 38px;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 1.15rem;
+
+  animation: fade-up 0.85s ease 0.18s both;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-block;
+
+  border-radius: 999px;
+
+  font-weight: 800;
+
+  transition:
+    color 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.primary-button {
+  padding: 14px 29px;
+
+  border: 1px solid $accent;
+
+  background: $accent;
+  color: $dark;
+
+  animation: fade-up 0.85s ease 0.28s both;
+}
+
+.primary-button:hover {
+  transform: translateY(-3px);
+
+  background: transparent;
+  color: $white;
+}
+
+
+// ============================================
+// CSS-GENERATED SCALABLE VECTOR ICON
+// ============================================
+
+.compass-icon {
+  display: block;
+
+  width: 34px;
+  height: 34px;
+
+  margin: 0 auto 18px;
+
+  background-color: $accent;
+
+  -webkit-mask:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='9' fill='none' stroke='black' stroke-width='2'/%3E%3Cpath d='M15.7 8.3 13 13l-4.7 2.7L11 11z' fill='black'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+
+  mask:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='9' fill='none' stroke='black' stroke-width='2'/%3E%3Cpath d='M15.7 8.3 13 13l-4.7 2.7L11 11z' fill='black'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+}
+
+
+// ============================================
+// ABOUT / GRID
+// ============================================
+
+.about {
+  background: $light;
+}
+
+.feature-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 28px;
+
+  margin-top: 55px;
+}
+
+.feature-card {
+  padding: 40px 30px;
+
+  border-radius: 16px;
+
+  background: $white;
+
+  box-shadow: 0 12px 35px rgba(13, 27, 30, 0.08);
+
+  text-align: left;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 19px 44px rgba(13, 27, 30, 0.14);
+}
+
+.feature-number {
+  display: block;
+
+  margin-bottom: 28px;
+
+  color: $accent;
+
+  font-size: 0.76rem;
+  font-weight: 900;
+
+  letter-spacing: 0.16em;
+}
+
+.feature-card h3 {
+  margin-bottom: 12px;
+
+  font-size: 1.45rem;
+}
+
+.feature-card p {
+  color: $muted;
+}
+
+
+// ============================================
+// DESTINATIONS / CAROUSEL
+// ============================================
+
+.destinations {
+  background: $section-alt;
+}
+
+.carousel {
+  position: relative;
+
+  max-width: 1000px;
+
+  margin: 58px auto 0;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  box-shadow: 0 18px 50px rgba(13, 27, 30, 0.15);
+}
+
+.carousel-track {
+  display: flex;
+
+  transition: transform 0.55s ease;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+
+  min-height: 440px;
+
+  padding: 60px 90px;
+
+  @include flex-center;
+
+  color: $white;
+
+  text-align: left;
+}
+
+.slide-alaska {
+  background: linear-gradient(135deg, #133f45, #32717a);
+}
+
+.slide-iceland {
+  background: linear-gradient(135deg, #523633, #a06458);
+}
+
+.slide-svalbard {
+  background: linear-gradient(135deg, #314050, #708398);
+}
+
+.slide-content {
+  width: 100%;
+  max-width: 650px;
+}
+
+.slide-number {
+  margin-bottom: 30px;
+
+  color: rgba(255, 255, 255, 0.14);
+
+  font-size: 4.2rem;
+  font-weight: 900;
+
+  line-height: 1;
+}
+
+.slide-location {
+  margin-bottom: 12px;
+}
+
+.carousel-slide h3 {
+  margin-bottom: 18px;
+
+  font-size: clamp(2.2rem, 4vw, 3.7rem);
+  line-height: 1.05;
+}
+
+.carousel-slide p:last-child {
+  max-width: 580px;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 1.05rem;
+}
+
+.carousel-button {
+  position: absolute;
+
+  top: 50%;
+
+  z-index: 10;
+
+  width: 52px;
+  height: 52px;
+
+  border: 0;
+  border-radius: 50%;
+
+  @include flex-center;
+
+  background: $white;
+  color: $dark;
+
+  box-shadow: 0 8px 25px rgba(13, 27, 30, 0.18);
+
+  cursor: pointer;
+
+  font-size: 1.4rem;
+
+  transform: translateY(-50%);
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.carousel-button:hover {
+  background: $accent;
+
+  transform: translateY(-50%) scale(1.08);
+}
+
+.carousel-button-prev {
+  left: -26px;
+}
+
+.carousel-button-next {
+  right: -26px;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 24px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: rgba(13, 27, 30, 0.25);
+
+  cursor: pointer;
+
+  transition:
+    width 0.25s ease,
+    border-radius 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.carousel-dot.active {
+  width: 30px;
+
+  border-radius: 999px;
+
+  background: $accent;
+}
+
+
+// ============================================
+// EXPERIENCES / MODAL CARDS
+// ============================================
+
+.experiences {
+  background: $white;
+}
+
+.experience-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 26px;
+
+  margin-top: 55px;
+}
+
+.experience-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  min-height: 335px;
+
+  padding: 38px 30px;
+
+  border: 1px solid rgba(13, 27, 30, 0.08);
+  border-radius: 16px;
+
+  background: $light;
+
+  text-align: left;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow: 0 18px 40px rgba(13, 27, 30, 0.12);
+}
+
+.experience-number {
+  margin-bottom: 38px;
+
+  color: $accent;
+
+  font-size: 0.8rem;
+  font-weight: 900;
+
+  letter-spacing: 0.15em;
+}
+
+.experience-card h3 {
+  margin-bottom: 14px;
+
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.experience-card p {
+  margin-bottom: 30px;
+
+  color: $muted;
+}
+
+.modal-open-button {
+  margin-top: auto;
+
+  padding: 6px 0;
+
+  border: 0;
+  border-bottom: 2px solid $accent;
+
+  background: transparent;
+  color: $dark;
+
+  cursor: pointer;
+
+  font-weight: 800;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.modal-open-button:hover {
+  color: $accent;
+
+  transform: translateX(4px);
+}
+
+
+// ============================================
+// MODAL
+// ============================================
+
+.modal {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 5000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-backdrop {
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(3, 12, 15, 0.79);
+
+  backdrop-filter: blur(5px);
+}
+
+.modal-dialog {
+  position: relative;
+
+  z-index: 1;
+
+  width: min(100%, 640px);
+
+  padding: 56px;
+
+  border-radius: 19px;
+
+  background: $white;
+
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
+
+  text-align: left;
+
+  transform: translateY(28px) scale(0.97);
+
+  transition: transform 0.3s ease;
+}
+
+.modal.active .modal-dialog {
+  transform: translateY(0) scale(1);
+}
+
+.modal-close-button {
+  position: absolute;
+
+  top: 17px;
+  right: 22px;
+
+  border: 0;
+
+  background: transparent;
+  color: $dark;
+
+  cursor: pointer;
+
+  font-size: 2rem;
+  line-height: 1;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.modal-close-button:hover {
+  color: $accent;
+
+  transform: rotate(90deg);
+}
+
+.modal-label {
+  margin-bottom: 13px;
+}
+
+.modal-dialog h2 {
+  margin-bottom: 20px;
+
+  font-size: clamp(2rem, 5vw, 3.1rem);
+  line-height: 1.05;
+}
+
+.modal-dialog > p:last-child {
+  color: $muted;
+}
+
+
+// ============================================
+// STORY / FIXED BACKGROUND IMAGE
+// ============================================
+
+.story {
+  min-height: 560px;
+
+  @include flex-center;
+
+  color: $white;
+
+  background:
+    linear-gradient(
+      rgba(5, 18, 22, 0.67),
+      rgba(5, 18, 22, 0.78)
+    ),
+    url("../assets/image.jpg");
+
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.story h2 {
+  color: $white;
+}
+
+.story-content {
+  max-width: 800px;
+}
+
+.story-content > p:not(.section-label) {
+  max-width: 650px;
+
+  margin: 0 auto 34px;
+
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.secondary-button {
+  padding: 13px 27px;
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+
+  color: $white;
+}
+
+.secondary-button:hover {
+  border-color: $accent;
+
+  background: $accent;
+  color: $dark;
+
+  transform: translateY(-3px);
+}
+
+
+// ============================================
+// VIDEO
+// ============================================
+
+.video-section {
+  background: $section-alt;
+}
+
+.video-wrapper {
+  max-width: 960px;
+
+  margin: 50px auto 0;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: #000;
+
+  box-shadow: 0 20px 55px rgba(13, 27, 30, 0.2);
+}
+
+.journey-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+
+  object-fit: cover;
+}
+
+
+// ============================================
+// CONTACT / SOCIAL MEDIA ICONS
+// ============================================
+
+.contact {
+  background: $dark;
+  color: $white;
+}
+
+.contact h2 {
+  color: $white;
+}
+
+.contact-description {
+  max-width: 600px;
+
+  margin: 0 auto;
+
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 18px;
+
+  margin-top: 42px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 10px 15px;
+
+  border-radius: 999px;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  transition:
+    color 0.25s ease,
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.social-link:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: $white;
+
+  transform: translateY(-3px);
+}
+
+
+/*
+  CSS-generated scalable social icons.
+  No external icon library is used.
+*/
+
+.social-icon {
+  width: 34px;
+  height: 34px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+
+  @include flex-center;
+
+  color: $accent;
+
+  font-weight: 900;
+}
+
+.social-icon::before {
+  line-height: 1;
+}
+
+.social-icon-github::before {
+  content: "GH";
+
+  font-size: 0.67rem;
+
+  letter-spacing: -0.06em;
+}
+
+.social-icon-linkedin::before {
+  content: "in";
+
+  font-size: 1rem;
+}
+
+.social-icon-instagram::before {
+  content: "◎";
+
+  font-size: 1.4rem;
+}
+
+
+// ============================================
+// FOOTER
+// ============================================
+
+.site-footer {
+  padding: 28px 20px;
+
+  background: #071114;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  text-align: center;
+
+  font-size: 0.9rem;
+}
+
+
+// ============================================
+// CSS3 KEYFRAME ANIMATIONS
+// ============================================
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+// ============================================
+// RESPONSIVENESS
+// ============================================
+
+@media (max-width: 1050px) {
+  .nav-links {
+    gap: 17px;
+  }
+
+  .nav-link {
+    font-size: 0.91rem;
+  }
+
+  .feature-grid,
+  .experience-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 860px) {
+  .navbar {
+    flex-direction: column;
+
+    gap: 12px;
+
+    padding: 16px 18px;
+  }
+
+  .site-header.scrolled .navbar {
+    padding: 9px 18px;
+  }
+
+  .logo {
+    font-size: 1.12rem;
+  }
+
+  .nav-links {
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 9px 17px;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+  }
+
+  .site-header.scrolled .nav-link {
+    font-size: 0.76rem;
+  }
+
+  .hero {
+    min-height: 85vh;
+  }
+
+  .carousel-slide {
+    min-height: 405px;
+
+    padding: 45px 55px;
+  }
+
+  .carousel-button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .carousel-button-prev {
+    left: -10px;
+  }
+
+  .carousel-button-next {
+    right: -10px;
+  }
+}
+
+
+@media (max-width: 760px) {
+  .section {
+    padding: 78px 20px;
+  }
+
+  .feature-grid,
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card,
+  .experience-card {
+    max-width: 560px;
+
+    margin: 0 auto;
+  }
+
+  .carousel-slide {
+    min-height: 400px;
+
+    padding: 40px 42px;
+  }
+
+  .slide-number {
+    font-size: 3.2rem;
+  }
+
+  .modal-dialog {
+    padding: 46px 30px 36px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 11vw, 4.5rem);
+  }
+}
+
+
+// ============================================
+// ACCESSIBILITY
+// ============================================
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+  }
+}
