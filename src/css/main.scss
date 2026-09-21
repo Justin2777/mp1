@@ -13,7 +13,6 @@ $section-alt: #e7eeec;
 $max-width: 1180px;
 $section-padding: 110px;
 
-
 // ============================================
 // SCSS MIXINS
 // ============================================
@@ -36,7 +35,6 @@ $section-padding: 110px;
   letter-spacing: -0.025em;
 }
 
-
 // ============================================
 // RESET / GLOBAL
 // ============================================
@@ -57,10 +55,7 @@ body {
   background: $light;
   color: $dark;
 
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 
   line-height: 1.6;
 }
@@ -87,7 +82,6 @@ video {
   display: block;
   max-width: 100%;
 }
-
 
 // ============================================
 // SHARED SECTION STYLES
@@ -134,7 +128,6 @@ video {
   color: $muted;
 }
 
-
 // ============================================
 // STICKY NAVBAR
 // ============================================
@@ -151,9 +144,7 @@ video {
 
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
 
-  transition:
-    background-color 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .navbar {
@@ -176,9 +167,7 @@ video {
 
   letter-spacing: 0.13em;
 
-  transition:
-    color 0.25s ease,
-    font-size 0.3s ease;
+  transition: color 0.25s ease, font-size 0.3s ease;
 }
 
 .logo:hover {
@@ -199,9 +188,7 @@ video {
 
   font-size: 1rem;
 
-  transition:
-    color 0.25s ease,
-    font-size 0.3s ease;
+  transition: color 0.25s ease, font-size 0.3s ease;
 }
 
 .nav-link::after {
@@ -230,7 +217,6 @@ video {
   width: 100%;
 }
 
-
 // Navbar becomes smaller after scrolling.
 
 .site-header.scrolled .navbar {
@@ -246,7 +232,6 @@ video {
   font-size: 0.88rem;
 }
 
-
 // ============================================
 // HERO / FIXED BACKGROUND / VERTICAL CENTERING
 // ============================================
@@ -260,11 +245,7 @@ video {
 
   color: $white;
 
-  background:
-    linear-gradient(
-      rgba(5, 18, 22, 0.62),
-      rgba(5, 18, 22, 0.73)
-    ),
+  background: linear-gradient(rgba(5, 18, 22, 0.62), rgba(5, 18, 22, 0.73)),
     url("../assets/image.jpg");
 
   background-attachment: fixed;
@@ -311,11 +292,8 @@ video {
 
   font-weight: 800;
 
-  transition:
-    color 0.25s ease,
-    background-color 0.25s ease,
-    border-color 0.25s ease,
-    transform 0.25s ease;
+  transition: color 0.25s ease, background-color 0.25s ease,
+    border-color 0.25s ease, transform 0.25s ease;
 }
 
 .primary-button {
@@ -336,7 +314,6 @@ video {
   color: $white;
 }
 
-
 // ============================================
 // CSS-GENERATED SCALABLE VECTOR ICON
 // ============================================
@@ -351,15 +328,12 @@ video {
 
   background-color: $accent;
 
-  -webkit-mask:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='9' fill='none' stroke='black' stroke-width='2'/%3E%3Cpath d='M15.7 8.3 13 13l-4.7 2.7L11 11z' fill='black'/%3E%3C/svg%3E")
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='9' fill='none' stroke='black' stroke-width='2'/%3E%3Cpath d='M15.7 8.3 13 13l-4.7 2.7L11 11z' fill='black'/%3E%3C/svg%3E")
     center / contain no-repeat;
 
-  mask:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='9' fill='none' stroke='black' stroke-width='2'/%3E%3Cpath d='M15.7 8.3 13 13l-4.7 2.7L11 11z' fill='black'/%3E%3C/svg%3E")
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='9' fill='none' stroke='black' stroke-width='2'/%3E%3Cpath d='M15.7 8.3 13 13l-4.7 2.7L11 11z' fill='black'/%3E%3C/svg%3E")
     center / contain no-repeat;
 }
-
 
 // ============================================
 // ABOUT / GRID
@@ -390,9 +364,7 @@ video {
 
   text-align: left;
 
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .feature-card:hover {
@@ -423,7 +395,6 @@ video {
 .feature-card p {
   color: $muted;
 }
-
 
 // ============================================
 // DESTINATIONS / CAROUSEL
@@ -542,9 +513,7 @@ video {
 
   transform: translateY(-50%);
 
-  transition:
-    background-color 0.25s ease,
-    transform 0.25s ease;
+  transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
 .carousel-button:hover {
@@ -581,9 +550,7 @@ video {
 
   cursor: pointer;
 
-  transition:
-    width 0.25s ease,
-    border-radius 0.25s ease,
+  transition: width 0.25s ease, border-radius 0.25s ease,
     background-color 0.25s ease;
 }
 
@@ -594,7 +561,6 @@ video {
 
   background: $accent;
 }
-
 
 // ============================================
 // EXPERIENCES / MODAL CARDS
@@ -630,9 +596,7 @@ video {
 
   text-align: left;
 
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .experience-card:hover {
@@ -680,9 +644,7 @@ video {
 
   font-weight: 800;
 
-  transition:
-    color 0.25s ease,
-    transform 0.25s ease;
+  transition: color 0.25s ease, transform 0.25s ease;
 }
 
 .modal-open-button:hover {
@@ -690,7 +652,6 @@ video {
 
   transform: translateX(4px);
 }
-
 
 // ============================================
 // MODAL
@@ -712,9 +673,7 @@ video {
   opacity: 0;
   visibility: hidden;
 
-  transition:
-    opacity 0.3s ease,
-    visibility 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .modal.active {
@@ -774,9 +733,7 @@ video {
   font-size: 2rem;
   line-height: 1;
 
-  transition:
-    color 0.2s ease,
-    transform 0.2s ease;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .modal-close-button:hover {
@@ -800,7 +757,6 @@ video {
   color: $muted;
 }
 
-
 // ============================================
 // STORY / FIXED BACKGROUND IMAGE
 // ============================================
@@ -812,11 +768,7 @@ video {
 
   color: $white;
 
-  background:
-    linear-gradient(
-      rgba(5, 18, 22, 0.67),
-      rgba(5, 18, 22, 0.78)
-    ),
+  background: linear-gradient(rgba(5, 18, 22, 0.67), rgba(5, 18, 22, 0.78)),
     url("../assets/image.jpg");
 
   background-attachment: fixed;
@@ -857,7 +809,6 @@ video {
   transform: translateY(-3px);
 }
 
-
 // ============================================
 // VIDEO
 // ============================================
@@ -886,7 +837,6 @@ video {
 
   object-fit: cover;
 }
-
 
 // ============================================
 // CONTACT / SOCIAL MEDIA ICONS
@@ -933,9 +883,7 @@ video {
 
   color: rgba(255, 255, 255, 0.78);
 
-  transition:
-    color 0.25s ease,
-    background-color 0.25s ease,
+  transition: color 0.25s ease, background-color 0.25s ease,
     transform 0.25s ease;
 }
 
@@ -946,50 +894,78 @@ video {
   transform: translateY(-3px);
 }
 
-
 /*
   CSS-generated scalable social icons.
   No external icon library is used.
 */
 
+// ============================================
+// SCALABLE SOCIAL MEDIA VECTOR ICONS
+// ============================================
+
 .social-icon {
-  width: 34px;
-  height: 34px;
+  position: relative;
+
+  width: 38px;
+  height: 38px;
 
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 50%;
 
   @include flex-center;
 
-  color: $accent;
-
-  font-weight: 900;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
 }
 
 .social-icon::before {
-  line-height: 1;
+  content: "";
+
+  display: block;
+
+  width: 19px;
+  height: 19px;
+
+  background-color: $accent;
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  -webkit-mask-position: center;
+  mask-position: center;
+
+  -webkit-mask-size: contain;
+  mask-size: contain;
 }
+
+/* GitHub */
 
 .social-icon-github::before {
-  content: "GH";
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 0C3.58 0 0 3.64 0 8.13c0 3.59 2.29 6.64 5.47 7.71.4.08.55-.17.55-.39 0-.19-.01-.84-.01-1.53-2.01.44-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.53-.01-.54.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.53.28-.87.51-1.07-1.78-.2-3.64-.91-3.64-4.03 0-.89.31-1.63.82-2.2-.08-.2-.36-1.04.08-2.16 0 0 .67-.22 2.2.84.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.06 2.2-.84 2.2-.84.44 1.12.16 1.96.08 2.16.51.57.82 1.3.82 2.2 0 3.13-1.87 3.83-3.65 4.03.29.25.54.74.54 1.51 0 1.09-.01 1.97-.01 2.24 0 .22.15.47.55.39A8.01 8.01 0 0 0 16 8.13C16 3.64 12.42 0 8 0Z'/%3E%3C/svg%3E");
 
-  font-size: 0.67rem;
-
-  letter-spacing: -0.06em;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 0C3.58 0 0 3.64 0 8.13c0 3.59 2.29 6.64 5.47 7.71.4.08.55-.17.55-.39 0-.19-.01-.84-.01-1.53-2.01.44-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.53-.01-.54.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.53.28-.87.51-1.07-1.78-.2-3.64-.91-3.64-4.03 0-.89.31-1.63.82-2.2-.08-.2-.36-1.04.08-2.16 0 0 .67-.22 2.2.84.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.06 2.2-.84 2.2-.84.44 1.12.16 1.96.08 2.16.51.57.82 1.3.82 2.2 0 3.13-1.87 3.83-3.65 4.03.29.25.54.74.54 1.51 0 1.09-.01 1.97-.01 2.24 0 .22.15.47.55.39A8.01 8.01 0 0 0 16 8.13C16 3.64 12.42 0 8 0Z'/%3E%3C/svg%3E");
 }
+
+/* LinkedIn */
 
 .social-icon-linkedin::before {
-  content: "in";
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 3.2A1.8 1.8 0 1 1 5 6.8 1.8 1.8 0 0 1 5 3.2ZM3.5 8.5h3V21h-3V8.5Zm5.5 0h2.9v1.7h.1c.8-1.3 2-2.1 3.9-2.1 4 0 5.1 2.6 5.1 6V21h-3v-6.1c0-1.5 0-3.4-2.1-3.4-2.1 0-2.4 1.6-2.4 3.3V21H9V8.5Z'/%3E%3C/svg%3E");
 
-  font-size: 1rem;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 3.2A1.8 1.8 0 1 1 5 6.8 1.8 1.8 0 0 1 5 3.2ZM3.5 8.5h3V21h-3V8.5Zm5.5 0h2.9v1.7h.1c.8-1.3 2-2.1 3.9-2.1 4 0 5.1 2.6 5.1 6V21h-3v-6.1c0-1.5 0-3.4-2.1-3.4-2.1 0-2.4 1.6-2.4 3.3V21H9V8.5Z'/%3E%3C/svg%3E");
 }
+
+/* Instagram */
 
 .social-icon-instagram::before {
-  content: "◎";
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.25-3.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z'/%3E%3C/svg%3E");
 
-  font-size: 1.4rem;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.25-3.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z'/%3E%3C/svg%3E");
 }
 
+.social-link:hover .social-icon {
+  border-color: $accent;
+
+  background-color: rgba(239, 164, 82, 0.08);
+}
 
 // ============================================
 // FOOTER
@@ -1006,7 +982,6 @@ video {
 
   font-size: 0.9rem;
 }
-
 
 // ============================================
 // CSS3 KEYFRAME ANIMATIONS
@@ -1026,7 +1001,6 @@ video {
   }
 }
 
-
 // ============================================
 // RESPONSIVENESS
 // ============================================
@@ -1045,7 +1019,6 @@ video {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 
 @media (max-width: 860px) {
   .navbar {
@@ -1104,7 +1077,6 @@ video {
   }
 }
 
-
 @media (max-width: 760px) {
   .section {
     padding: 78px 20px;
@@ -1140,7 +1112,6 @@ video {
     font-size: clamp(3rem, 11vw, 4.5rem);
   }
 }
-
 
 // ============================================
 // ACCESSIBILITY
